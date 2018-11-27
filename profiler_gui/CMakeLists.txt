@@ -80,6 +80,7 @@ if (Qt5Widgets_FOUND)
     )
 
     set_property(TARGET profiler_gui PROPERTY INSTALL_RPATH_USE_LINK_PATH TRUE)
+    set_target_properties(profiler_gui PROPERTIES COMPILE_FLAGS "-Wno-sign-compare -Wno-unused-variable -Wno-reorder")
 else ()
     message(STATUS "INFO\n\n\tQt5 not found! Generating EasyProfiler projects without GUI.\n")
 endif ()
